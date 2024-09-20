@@ -23,7 +23,7 @@
 
 #define FC_TARGET_MCU     STM32F7X2
 
-#define BOARD_NAME        ORQAF7DIGITAL
+#define BOARD_NAME        ORQAF7
 #define MANUFACTURER_ID   ORQA
 
 #define USE_GYRO
@@ -34,6 +34,7 @@
 #define USE_BARO_DPS310
 #define USE_FLASH
 #define USE_FLASH_W25Q128FV
+#define USE_MAX7456
 
 #define BEEPER_PIN           PA4
 #define MOTOR1_PIN           PC8  
@@ -73,29 +74,36 @@
 #define SPI1_SDO_PIN         PA7
 #define GYRO_1_EXTI_PIN      PC4
 #define GYRO_1_CS_PIN        PB2
+#define GYRO_1_SPI_INSTANCE SPI1
+#define USE_SPI_GYRO
 
 #define SPI2_SCK_PIN         PB13
 #define SPI2_SDI_PIN         PB14
 #define SPI2_SDO_PIN         PB15
 #define FLASH_CS_PIN         PB12
+#define FLASH_SPI_INSTANCE SPI2
 
 #define SPI3_SCK_PIN         PC10
 #define SPI3_SDI_PIN         PC11
 #define SPI3_SDO_PIN         PB5
+#define MAX7456_SPI_CS_PIN   PC3
+#define MAX7456_SPI_INSTANCE SPI3
 
 #define ADC_VBAT_PIN         PC0
 #define ADC_CURR_PIN         PC2
 
 #define ESCSERIAL_PIN        PD2                
 #define USB_DETECT_PIN       PA10
+#define CAMERA_CONTROL_PIN   PB3
+#define LED_STRIP_PIN        PA15
 
 #define TIMER_PIN_MAPPING \
     TIMER_PIN_MAP( 0, PC8,  1,  0) \
     TIMER_PIN_MAP( 1, PC9,  1,  0) \
     TIMER_PIN_MAP( 2, PA8,  1,  1) \
     TIMER_PIN_MAP( 3, PA9,  1,  1) \
-    TIMER_PIN_MAP( 4, PA15, 1,  1) \
-    TIMER_PIN_MAP( 5, PA4,  1,  1)  
+    TIMER_PIN_MAP( 4, PA15, 1,  0) \
+    TIMER_PIN_MAP( 5, PB3,  1,  0)
 
 #define DEFAULT_VOLTAGE_METER_SCALE 112
 #define DEFAULT_VOLTAGE_METER_DIVIDER 1
@@ -106,11 +114,9 @@
 #define GPS_UART SERIAL_PORT_USART6
 #define BARO_I2C_INSTANCE (I2CDEV_1)
 #define DEFAULT_BLACKBOX_DEVICE     BLACKBOX_DEVICE_FLASH
-#define DEFAULT_DSHOT_BURST DSHOT_DMAR_ON
 #define DEFAULT_CURRENT_METER_SOURCE CURRENT_METER_ADC
 #define DEFAULT_VOLTAGE_METER_SOURCE VOLTAGE_METER_ADC
 #define USE_BEEPER
 #define SYSTEM_HSE_MHZ 8
-#define FLASH_SPI_INSTANCE SPI2
-#define USE_SPI_GYRO
-#define GYRO_1_SPI_INSTANCE SPI1
+
+
