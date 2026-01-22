@@ -45,6 +45,7 @@
 #define USE_MAG
 #define USE_MAX7456
 #define USE_BEEPER
+#define USE_RX_VTX_HYBRID
 
 #define BEEPER_PIN           PE9
 #define MOTOR1_PIN           PD12
