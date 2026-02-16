@@ -38,6 +38,7 @@
 #define USE_BARO_MS5611
 #define USE_MAG
 #define USE_MAX7456
+#define USE_MAG_RM3100
 
 
 #define BEEPER_PIN           PE9
