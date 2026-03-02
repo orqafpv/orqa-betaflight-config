@@ -39,7 +39,8 @@
 #define USE_MAG
 #define USE_MAX7456
 #define USE_MAG_RM3100
-
+#define USE_SDCARD
+#define USE_SDIO_PULLUP
 
 #define BEEPER_PIN           PE9
 
