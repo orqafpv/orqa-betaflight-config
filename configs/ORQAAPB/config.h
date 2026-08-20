@@ -68,7 +68,7 @@
 #define UART4_TX_PIN         PC10  
 #define UART4_RX_PIN         PC11      
 
-#define UART6_TX_PIN         PC5         
+#define UART6_TX_PIN         PC6         
 #define UART6_RX_PIN         PC7
 
 #define UART7_TX_PIN         PE8
